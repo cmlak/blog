@@ -10,6 +10,9 @@ def index(request):
 
     return render(request, "blog/index.html", {"posts": posts})
 
+def test(request):
+    return render(request, "blog/test.html")
+
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
